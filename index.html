@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>भारत चुनाव सहायक | India Election Assistant</title>
+<meta name="description" content="Interactive guide to India's election process — flashcards, quizzes, AI chat, voter journey wizard and more."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<!-- ===== SIDEBAR NAV ===== -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-brand">
+    <span class="brand-icon">🗳️</span>
+    <div>
+      <div class="brand-title">Election Assistant</div>
+      <div class="brand-sub">भारत चुनाव सहायक</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#" class="nav-link active" data-page="home">🏠 <span>Dashboard</span></a></li>
+    <li><a href="#" class="nav-link" data-page="chat">🤖 <span>AI Assistant</span></a></li>
+    <li><a href="#" class="nav-link" data-page="flashcards">📚 <span>Flashcards</span></a></li>
+    <li><a href="#" class="nav-link" data-page="quiz">🧠 <span>Quiz</span></a></li>
+    <li><a href="#" class="nav-link" data-page="journey">🗺️ <span>Voter Journey</span></a></li>
+    <li><a href="#" class="nav-link" data-page="timeline">📅 <span>Timeline</span></a></li>
+    <li><a href="#" class="nav-link" data-page="faq">❓ <span>FAQ</span></a></li>
+    <li><a href="#" class="nav-link" data-page="helpline">📞 <span>Helplines</span></a></li>
+    <li><a href="#" class="nav-link" data-page="content">📋 <span>Learn More</span></a></li>
+  </ul>
+  <div class="sidebar-footer">
+    <button class="btn-accessibility" id="btnA11y" title="Accessibility">♿ Accessibility</button>
+  </div>
+</nav>
+
+<!-- ===== TOP BAR (mobile) ===== -->
+<header class="topbar">
+  <button class="hamburger" id="hamburger">☰</button>
+  <span class="topbar-title">🗳️ Election Assistant</span>
+  <button class="theme-toggle" id="themeToggle">🌙</button>
+</header>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="main-content" id="mainContent">
+
+  <!-- HOME PAGE -->
+  <section class="page active" id="page-home">
+    <div class="hero">
+      <div class="hero-badge">🇮🇳 Empowering Every Voter</div>
+      <h1 class="hero-title">India's #1 Election<br/><span class="gradient-text">Learning Platform</span></h1>
+      <p class="hero-sub">Understand the world's largest democratic process — interactively, clearly, and completely.</p>
+      <div class="hero-actions">
+        <button class="btn-primary" onclick="goPage('chat')">🤖 Ask AI Assistant</button>
+        <button class="btn-outline" onclick="goPage('journey')">🗺️ Start Voter Journey</button>
+      </div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-num">60+</div><div class="stat-label">Flashcards</div></div>
+      <div class="stat-card"><div class="stat-num">80+</div><div class="stat-label">Quiz Questions</div></div>
+      <div class="stat-card"><div class="stat-num">50+</div><div class="stat-label">FAQs</div></div>
+      <div class="stat-card"><div class="stat-num">36</div><div class="stat-label">State Helplines</div></div>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card" onclick="goPage('chat')">
+        <div class="fc-icon">🤖</div>
+        <div class="fc-title">AI Chat Assistant</div>
+        <div class="fc-desc">Ask anything about Indian elections — registration, EVM, NOTA, MCC and more.</div>
+        <span class="fc-badge">Gemini Powered</span>
+      </div>
+      <div class="feature-card" onclick="goPage('flashcards')">
+        <div class="fc-icon">📚</div>
+        <div class="fc-title">Flashcards</div>
+        <div class="fc-desc">60+ flip cards covering key electoral terms, articles, and procedures.</div>
+        <span class="fc-badge">Spaced Repetition</span>
+      </div>
+      <div class="feature-card" onclick="goPage('quiz')">
+        <div class="fc-icon">🧠</div>
+        <div class="fc-title">Interactive Quiz</div>
+        <div class="fc-desc">Test your knowledge with 80+ MCQ questions across all difficulty levels.</div>
+        <span class="fc-badge">With Explanations</span>
+      </div>
+      <div class="feature-card" onclick="goPage('journey')">
+        <div class="fc-icon">🗺️</div>
+        <div class="fc-title">Voter Journey Wizard</div>
+        <div class="fc-desc">Step-by-step guide from registration to voting and results.</div>
+        <span class="fc-badge">8 Steps</span>
+      </div>
+      <div class="feature-card" onclick="goPage('timeline')">
+        <div class="fc-icon">📅</div>
+        <div class="fc-title">Election Timeline</div>
+        <div class="fc-desc">Visual interactive timeline of every stage in the election process.</div>
+        <span class="fc-badge">Interactive</span>
+      </div>
+      <div class="feature-card" onclick="goPage('helpline')">
+        <div class="fc-icon">📞</div>
+        <div class="fc-title">Helpline Directory</div>
+        <div class="fc-desc">ECI contacts, state CEOs, 1950 helpline, cVIGIL, NVSP and more.</div>
+        <span class="fc-badge">All States</span>
+      </div>
+    </div>
+    <div class="info-banner">
+      <span>📢</span>
+      <span>National Voter Helpline: <strong>1950</strong> &nbsp;|&nbsp; NVSP: <a href="https://nvsp.in" target="_blank">nvsp.in</a> &nbsp;|&nbsp; cVIGIL App available on Play Store & App Store</span>
+    </div>
+  </section>
+
+  <!-- CHAT PAGE -->
+  <section class="page" id="page-chat"></section>
+
+  <!-- FLASHCARDS PAGE -->
+  <section class="page" id="page-flashcards"></section>
+
+  <!-- QUIZ PAGE -->
+  <section class="page" id="page-quiz"></section>
+
+  <!-- JOURNEY PAGE -->
+  <section class="page" id="page-journey"></section>
+
+  <!-- TIMELINE PAGE -->
+  <section class="page" id="page-timeline"></section>
+
+  <!-- FAQ PAGE -->
+  <section class="page" id="page-faq"></section>
+
+  <!-- HELPLINE PAGE -->
+  <section class="page" id="page-helpline"></section>
+
+  <!-- CONTENT PAGE -->
+  <section class="page" id="page-content"></section>
+
+</main>
+
+<!-- ACCESSIBILITY PANEL -->
+<div class="a11y-panel" id="a11yPanel" style="display:none">
+  <div class="a11y-title">♿ Accessibility</div>
+  <div class="a11y-row"><span>Font Size</span>
+    <div class="a11y-btns">
+      <button onclick="setFont('sm')">A</button>
+      <button onclick="setFont('md')">A</button>
+      <button onclick="setFont('lg')">A</button>
+    </div>
+  </div>
+  <div class="a11y-row"><span>Contrast</span>
+    <button onclick="toggleContrast()">Toggle High Contrast</button>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
